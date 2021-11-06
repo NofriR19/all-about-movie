@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ======== Header ========== */
+
+header {
+  background: #fff;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+
+.header-inner {
+  box-sizing: border-box;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.header-logo {
+  float: left;
+  font-size: 36px;
+  padding: 20px 40px;
+}
+
+.header-navbar {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+.header-navbar > a {
+    text-decoration: none;
+}
+
+.header-nav-item {
+  display: inline-block;
+  vertical-align: middle;
+  color: #222831;
+  margin: 0 1.92em;
+  padding: 0.618em 0;
+}
+
+/* ======== Header End ========== */
+
+/* ======== Jumbotron ========== */
+.jumbotron {
+  display: block;
+  position: relative;
+  background-color: #eeeeee;
+  width: auto;
+}
+.jumbotron img {
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  color: #222831;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.display-left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(-0%, -50%);
+}
+
+.display-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+}
+
+/* ======== Jumbotron End ========== */
+
+/* ========== Body ===========*/
+
+#content {
+  float: left;
+  width: 70%;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+}
+.card {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 25px;
+}
+.card > img {
+    margin-bottom: 20px;
+}
+.card > h2 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+h2,h3 {
+  color: #222831;
+}
+
+/* ======== Body End ========== */
+
+/* ======= Konten Aside ===== */
+aside {
+  width: 25%;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  float: right;
+}
+
+.profile {
+  text-align: center;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 200px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+}
+
+/* ======== Konten Aside End ========== */
+
+/* ======== Footer ========== */
+footer {
+  background: #393e46;
+  height: auto;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding-top: 40px;
+  color: #eeeeee;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: #eeeeee;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  min-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.medsos {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.medsos li {
+  margin: 0 10px;
+}
+
+.medsos a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+.medsos a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.medsos a:hover i {
+  color: #ffd369;
+}
+
+.footer-copyright {
+  background: #222831;
+  width: 100%;
+  padding: 2px 0;
+  text-align: center;
+}
+
+.footer-copyright p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+/* ======== Footer End ========== */
+
+/* ========== Responsive ========= */
+
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+  .profile-image img {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .card img {
+    width: 100%;
+    height: 100%;
+  }
+  .jumbotron img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-nav-item {
+    display: none;
+  }
+
+  .footer-content p {
+    min-width: 0px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .icon {
+    display: none;
+  }
+
+}
